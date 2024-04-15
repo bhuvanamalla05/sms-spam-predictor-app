@@ -4,9 +4,8 @@ import string
 from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
-nltk.download('punkt')
-ps = PorterStemmer()
 
+ps = PorterStemmer()
 
 def transform_text(text):
     text = text.lower()
@@ -37,9 +36,9 @@ model = pickle.load(open('model.pkl','rb'))
 
 st.title("SMS Spam Predictor")
 
-input_sms = st.text_area("Enter your msg below :")
+input_sms = st.text_area("Enter your message below :")
 
-if st.button('Lets check'):
+if st.button('Let\'s check'):
 
     # 1. preprocess
     transformed_sms = transform_text(input_sms)
